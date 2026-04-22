@@ -1,0 +1,84 @@
+// 🎯 Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-light: #f8f9fa;
+$text-dark: #212529;
+$font-main: 'Segoe UI', Arial, sans-serif;
+
+// 🎯 Mixin for reusable card-style shadow
+@mixin card-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+// 🎯 Base Styles
+body {
+  background-color: $background-light;
+  color: $text-dark;
+  font-family: $font-main;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+// 🎯 Header
+.main-header {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-weight: 400;
+    color: lighten(white, 20%);
+  }
+}
+
+// 🎯 About Section
+.about {
+  @include card-shadow;
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 700px;
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// 🎯 Footer
+.main-footer {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
