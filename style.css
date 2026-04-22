@@ -1,21 +1,76 @@
-/* Custom tweaks to enhance Bootstrap appearance */
-
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f7ff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
   transition: background-color 0.5s ease;
 }
 
-header h1 {
-  font-size: 2.2rem;
+header {
+  text-align: center;
+  background-color: #0052cc;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-header h4 {
-  font-weight: 500;
+img {
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-#about p {
-  font-size: 1.1rem;
+p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-footer {
-  font-size: 0.9rem;
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003d99;
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  img {
+    width: 80%;
+  }
+  p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 16px;
+  }
+  button {
+    width: 80%;
+  }
 }
